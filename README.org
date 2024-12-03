@@ -1,0 +1,25 @@
+#+title: Thread Macros
+
+This is an unstable exercise in proc-macros aimed to mimic Clojure's thread
+(arrow) macros.
+
+Assuming it works, supports the following placements:
+
+1. Thread (first) macro (~Placement::First~)
+2. Thread last macro (~Placement::Last~)
+3. Thread As macro (~Ident~ alias)
+
+The following "magics" can be also used:
+
+1. Maps (successive maps on the following types which support it):
+   1. ~Map::Ok~ for returning results when everything ~is_ok~
+   2. ~Map::Some~ for returning results when everything ~is_some~
+2. Conds (untested):
+   1. ~CondType::Cond~ passing the value on another
+   2. ~CondType::CondClone~ cloning the value with each condition.
+
+See examples in the ~./tests~ directory.
+
+As this crate is a simple experiment, like my other public repositories, it is
+unlikely to be updated. Regardless, I think ~ref~ and ~mut~ modifiers are good
+additions to the ~LetAlias~ much like ~CondClone~.

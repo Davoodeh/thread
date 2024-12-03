@@ -1,0 +1,16 @@
+[package]
+name = "thread"
+version = "0.1.0"
+description = "Clojure thread macros in Rust"
+authors = ["M. Yas. Davoodeh <MYDavoodeh@gmail.com>"]
+edition = "2021"
+rust-version = "1.65" # let-else is on 1.65
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = { version = "2.0", features = ["full"] }
+quote = "1.0"
+proc-macro2 = "1.0"
+paste = "1"
